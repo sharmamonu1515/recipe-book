@@ -1,0 +1,20 @@
+<a style="cursor: pointer; margin-bottom: 5px;" 
+    [routerLink]="['view', recipeIndex+1]"
+    routerLinkActive="active"
+    class="list-group-item clearfix"
+    >
+    <div class="float-left">
+        <h4 class="list-group-item-heading"> {{ recipe.name }} </h4>
+        <p class="list-group-item-text"> {{ recipe.description }} </p>
+    </div>
+    <div class="float-right">
+        <!-- <img 
+        src="{{ recipe.imagePath }}" 
+        alt="{{ recipe.name }}" 
+        width="80px" height="80px" class=ïmg-responsive> -->
+        <img 
+        [src]="recipe.imagePath" 
+        alt="{{ recipe.name }}" 
+        width="80px" height="80px" class=ïmg-responsive>
+    </div>
+</a>

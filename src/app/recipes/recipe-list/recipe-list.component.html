@@ -1,0 +1,16 @@
+<div class="row py-1">
+    <div class="col-md-12">
+        <button class="btn btn-sm btn-primary"
+        (click)="newRecipe()">New Recipe</button>
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <app-recipe-item  
+        *ngFor="let recipeEl of recipes; let i=index"
+        [recipe] = "recipeEl"
+        [recipeIndex] = "i"
+        ></app-recipe-item>
+    </div>
+</div>
